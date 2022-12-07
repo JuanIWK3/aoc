@@ -1,6 +1,5 @@
-import { readFileSync } from 'fs';
 
-const input = readFileSync('./input.txt', 'utf-8');
+const input = await Deno.readTextFile('./input.txt');
 // const input = `vJrwpWtwJgWrhcsFMMfFFhFp
 // jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL
 // PmmdzqPrVvPwwTWBwg
@@ -31,17 +30,17 @@ for (let line of lines) {
     continue;
   }
 
-  console.log(repeated);
+  //console.log(repeated);
 
   if (repeated === repeated.toLowerCase()) {
     // LowerCase
     priority += repeated.charCodeAt() - 96;
-    console.log(repeated.charCodeAt() - 96);
+    //console.log(repeated.charCodeAt() - 96);
   } else {
     // UpperCase
-    console.log('maiscula');
+    //console.log('maiscula');
     priority += repeated.charCodeAt() - 64 + 26;
-    console.log(repeated.charCodeAt() - 64 + 26);
+    //console.log(repeated.charCodeAt() - 64 + 26);
   }
 }
 

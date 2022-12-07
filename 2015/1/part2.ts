@@ -1,6 +1,6 @@
-import { readFileSync } from 'fs';
+export const a = "";
 
-const input = readFileSync('./input.txt', 'utf-8');
+const input = Deno.ReadTextInput('./input.txt');
 // const input = '()())';
 
 let floor = 0;
