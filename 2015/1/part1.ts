@@ -9,9 +9,6 @@ for (let i = 0; i < input.length; i++) {
   } else if (input[i] == ')') {
     floor--;
   }
-
-  if (floor == -1) {
-    console.log(i + 1);
-    break;
-  }
 }
+
+console.log(floor);
